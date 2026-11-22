@@ -1,4 +1,4 @@
-const CACHE='entrena-montana-v1';
+const CACHE='entrena-montana-v3';
 const ASSETS=['./','./index.html','./styles.css','./app.js','./data/plan.json','./manifest.webmanifest','./assets/icon-192.png','./assets/icon-512.png','./assets/legs.svg','./assets/step.svg','./assets/pull.svg','./assets/push.svg','./assets/cardio.svg','./assets/balance.svg','./assets/move.svg'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

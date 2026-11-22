@@ -14,7 +14,9 @@ Aplicación web progresiva (PWA) para gestionar una rutina general de preparaci�
 - `data/plan.json`: sesiones, ejercicios, series, repeticiones, descansos, notas, términos de búsqueda en YouTube.
 - `styles.css`: diseño, tipografía y colores.
 - `app.js`: lógica de navegación, registro, importación y exportación.
-- `assets/*.svg`: ilustraciones esquemáticas de movimientos (no sustituyen los vídeos).
+- `assets/*.svg`: ilustraciones esquemáticas de movimientos (respaldo visual sin conexión).
+- Las miniaturas de ejercicios se enlazan a YouTube mediante URLs fijas de `i.ytimg.com`; no se actualizan automáticamente.
+- En `Ajustes y datos` puedes abrir `Editar vídeos de ejercicios`, pegar una URL de YouTube y guardar una miniatura personalizada para ese dispositivo.
 
 Cada ejercicio requiere un `id` único y estable. Si cambias un identificador, las anotaciones anteriores ya no se asociarán a ese ejercicio.
 
